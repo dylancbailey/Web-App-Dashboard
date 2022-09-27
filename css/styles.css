@@ -1,4 +1,8 @@
-/* Grid */
+:root {
+    --main-text-color: white;
+}
+
+/* Grid & FlexBox */
 .grid-container {
     display: grid;
     grid-template-columns: 100%;
@@ -19,6 +23,10 @@
 } 
 .nav {
     grid-area: navigation;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 1rem;
 }
 .main {
     display: grid;
@@ -26,13 +34,25 @@
 }
 
 /* Base Styles */
-img {
+.member-img {
     width: 4rem;
     height: 4rem;
     border-radius: 50%;
 }
 a {
     text-decoration: none;
+}
+
+/* SVG */
+.bell {
+    width: 1.9rem;
+    height: 1.9rem;
+    fill: var(--main-text-color);
+}
+.nav-svg {
+    width: 2.5rem;
+    height: 2.5rem;
+    filter: invert(1);
 }
 
 /* Header */
