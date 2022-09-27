@@ -17,6 +17,7 @@
     grid-area: header;
     align-items: center;
     justify-content: flex-end;
+    color: white;
 }
 .header h1 {
     margin-right: auto;
@@ -25,7 +26,7 @@
     grid-area: navigation;
     display: flex;
     justify-content: center;
-    gap: 2rem;
+    gap: 1.8rem;
     padding: 1rem;
 }
 .main {
@@ -34,35 +35,96 @@
 }
 
 /* Base Styles */
+body {
+    font-family: 'Roboto', sans-serif;;
+}
+h1, h2, h3, p {
+    font-size: 1rem;
+    font-weight: 400;
+}
 .member-img {
-    width: 4rem;
-    height: 4rem;
+    width: 3rem;
+    height: 3rem;
     border-radius: 50%;
 }
 a {
     text-decoration: none;
 }
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+section {
+    border-bottom: 1px solid grey;
+}
 
 /* SVG */
 .bell {
-    width: 1.9rem;
-    height: 1.9rem;
+    width: 1.2rem;
+    height: 1.2rem;
     fill: var(--main-text-color);
 }
 .nav-svg {
-    width: 2.5rem;
-    height: 2.5rem;
+    width: 1.9rem;
+    height: 1.9rem;
     filter: invert(1);
 }
 
 /* Header */
 .header {
     background-color: rgba(116,119,191,255);
+    padding: 1rem;
+    font-size: .8rem;
+}
+.title-bold {
+    font-weight: 700;
+}
+.header h1 {
+    font-size: 1.5rem;
+}
+.bell-container {
+    border-right: 2px solid grey;
+    padding: 1rem .5rem;
+}
+.header img {
+    margin: 0 .5rem;
+}
+.header h3 {
+    font-size: .7rem;
 }
 
 /* Nav */
 .nav {
     background-color: rgba(77,76,114,255);
+}
+
+/* Main */
+.main-header {
+    display: flex;
+    align-items: center;
+    width: 100vw;
+}
+.main-header h2 {
+    padding: 0 1rem;
+}
+.tab {
+    background-color: rgba(247,247,247,255);
+    height: 4rem;
+    width: 100%;
+    border-left: 2px solid rgba(219,219,219,255);
+    border-bottom: 2px solid rgba(219,219,219,255);
+}
+
+.traffic-nav {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+/* Socials */
+.social-image {
+    width: 5rem;
+    height: 5rem;
 }
 
 /* Widgets */
@@ -111,6 +173,10 @@ a {
             "navigation main";
         }
 
+        .nav {
+            flex-direction: column;
+            justify-content: flex-start;
+        }
         .main {
             grid-template-columns: 50%;
         }
