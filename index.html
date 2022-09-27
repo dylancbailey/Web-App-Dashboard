@@ -220,12 +220,13 @@
         <!-- messaging widget -->
         <section class="message">
             <h3 class="title">Message User</h3>
-
-            <form class="widget-container">
-                <input type="text" placeholder="Search for user" class="form-field" id="userField">
-                <textarea placeholder="Message for user" class="form-area" id="messageField"></textarea>
-                <button class="button-primary" id="send">Send</button>
-            </form>
+            <div class="message-wrapper">
+                <form class="widget-container">
+                    <input type="text" placeholder="Search for User" class="form-field" id="userField">
+                    <textarea placeholder="Message for User" class="form-area" id="messageField"></textarea>
+                    <button class="btn-primary btn-send" id="send">Send</button>
+                </form>
+            </div>
         </section>
 
         <!-- settings -->
@@ -247,8 +248,8 @@
                 <!-- more options -->
             </select>
             <div class="settings-button">
-                <button class="button-primary" id="save">Save</button>
-                <button class="button-disabled" id="cancel">Cancel</button>
+                <button class="btn-primary" id="save">Save</button>
+                <button class="btn-disabled" id="cancel">Cancel</button>
             </div>
         </section>
     </main>
