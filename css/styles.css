@@ -468,6 +468,10 @@ select:first-child {
     .activity, .settings {
         grid-column: 2 / span 1;
     }
+    /* Main */
+    .traffic-nav {
+        margin-right: 3rem;
+    }
 
     /* Recent */
     .activity,
