@@ -418,6 +418,23 @@ select:first-child {
         .btn-wrapper {
             width: 95%;
         }
+        .checkbox {
+            width: 80px;
+        }
+        .checkbox::after {
+            left: 20%;
+        }
+        .checkbox.checkbox:checked::after {
+            left: 80%;
+        }
+        .email-toggle,
+        .public-toggle {
+            justify-content: flex-start;
+            gap: 3rem;
+        }
+        .public-toggle {
+            gap: 5rem;
+        }
 
         .widget-container-full {
             width: 90vw;
