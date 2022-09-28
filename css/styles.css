@@ -30,7 +30,7 @@
     grid-area: navigation;
     display: flex;
     justify-content: center;
-    gap: 1.8rem;
+    gap: 10%;
     padding: 1rem;
 }
 .main {
@@ -249,10 +249,6 @@ section {
 }
 
 /* Message */
-.message-wrapper {
-    min-width: 320px;
-    max-width: 1024px;
-}
 .widget-container {
     display: flex;
     flex-direction: column;
@@ -262,7 +258,8 @@ section {
     margin: 0 auto;
 }
 input,
-textarea {
+textarea,
+.form-field {
     background-color: var(--light-gray);
     padding: 1rem;
     border-radius: 10px;
@@ -283,9 +280,36 @@ textarea {
     color: white;
     padding: 1rem;
     border-radius: 10px;
+    text-transform: uppercase;
 }
 .btn-send {
     max-width: 100%;
+    margin-bottom: 1rem;
+}
+
+/* Settings */
+.toggle-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: 1.5rem auto;
+}
+.btn-wrapper {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+.timezone {
+    width: 100%;
+}
+.save,
+.cancel {
+    width: 47%;
+}
+.cancel {
+    background-color: gray;
 }
 
 /* Buttom Toggle */

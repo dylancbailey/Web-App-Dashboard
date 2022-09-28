@@ -242,14 +242,18 @@
                 <input class="checkbox" type="checkbox">
             </div>
 
-            <select class="form-field" id="timezone">
-                <option disable selected>Select a timezone</option>
-                <option>Eastern</option>
-                <!-- more options -->
-            </select>
+            <div class="toggle-container">
+                <select class="form-field timezone" id="timezone">
+                    <option disable selected>Select a timezone</option>
+                    <option>Eastern</option>
+                    <!-- more options -->
+                </select>
+            </div>
             <div class="settings-button">
-                <button class="btn-primary" id="save">Save</button>
-                <button class="btn-disabled" id="cancel">Cancel</button>
+                <div class="btn-wrapper">
+                    <button class="btn-primary save" id="save">Save</button>
+                    <button class="btn-primary cancel" id="cancel">Cancel</button>
+                </div>
             </div>
         </section>
     </main>
