@@ -380,6 +380,16 @@ select:first-child {
             grid-column: 2 / span 1;
         }
 
+        /* Main */
+        .traffic-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .traffic-nav {
+            margin-right: 2rem;
+        }
+
         /* Graphs */
         .doughnut {
             border-left: 1px solid grey;
