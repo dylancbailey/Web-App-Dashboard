@@ -304,6 +304,10 @@ textarea {
 .timezone {
     width: 100%;
 }
+select:first-child {
+    color: grey;
+}
+
 .save,
 .cancel {
     width: 47%;
