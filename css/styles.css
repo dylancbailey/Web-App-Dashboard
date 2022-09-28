@@ -455,5 +455,21 @@ select:first-child {
 }
 
 @media screen and (min-width: 1024px) {
-    
+    .members, .message {
+        grid-column: 1 / span 1;
+    }
+    .activity, .settings {
+        grid-column: 2 / span 1;
+    }
+
+    /* Recent */
+    .activity,
+    .settings {
+        border-left: 1px solid grey;
+    }
+
+    /* Settings */
+    .timezone {
+        margin-top: .4rem;
+    }
 }
