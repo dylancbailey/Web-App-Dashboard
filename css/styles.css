@@ -434,7 +434,14 @@ select:first-child {
         .checkbox::after {
             left: 20%;
         }
-        .checkbox.checkbox:checked::after {
+        .checkbox:checked::before {
+            content: 'ON';
+            color: white;
+            position: absolute;
+            top: 25%;
+            left: 10%;
+        }
+        .checkbox:checked::after {
             left: 80%;
         }
         .email-toggle,
