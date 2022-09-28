@@ -373,6 +373,11 @@ select:first-child {
             grid-column: 2 / span 1;
         }
         /* Socials */
+        .social-container {
+            display: flex;
+            gap: 1rem;
+            margin: 0 1rem;
+        }
 
         .widget-container-full {
             width: 90vw;
