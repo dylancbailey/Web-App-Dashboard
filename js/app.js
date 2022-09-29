@@ -3,7 +3,7 @@ const alertBanner = document.getElementById('alert');
 //create the html for banner
 alertBanner.innerHTML = 
 `<div class="alert-banner">
-<p><strong>Alert:</strong> You have <strong>6</strong> overdue tasks
+<p><strong>Alert:</strong> You have <strong>2</strong> overdue tasks
 to complete</p>
 <p class="alert-banner-close">x</p>
 </div>
@@ -26,6 +26,33 @@ let trafficData = {
         data: [750, 1250, 1000, 2000, 1500, 1750, 1250, 1850, 2250, 1500, 2500],
         backgroundColor: 'rgba(116, 119, 191, .3)',
         borderWidth: 1,
+    }]
+};
+
+let trafficDataHourly = {
+    labels: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'],
+    datasets: [{
+        data: [100, 200, 300, 100, 500, 230, 400, 100, 300, 123, 345, 200],
+        backgroundColor: 'rgba(116, 119, 191, .3)',
+        borderWidth: 1
+    }]
+};
+
+let trafficDataDaily = {
+    labels: ['M', 'T', 'W', 'T', 'F', 'S', 'S'],
+    datasets: [{
+        data: [400, 200, 560, 320, 110, 245, 500],
+        backgroundColor: 'rgba(116, 119, 191, .3)',
+        borderWidth: 1
+    }]
+};
+
+let trafficDataWeekly = {
+    labels: ['1-7', '8-14', '15-21', '22-30'],
+    datasets: [{
+        data: [1000, 3254, 2234, 4324],
+        backgroundColor: 'rgba(116, 119, 191, .3)',
+        borderWidth: 1
     }]
 };
 
@@ -54,10 +81,29 @@ let trafficChart = new Chart(trafficCanvas, {
     options: trafficOptions,
 });
 
+const updateChart = (target) => {
+    if (target.textContent.includes('Hourly')) {
+        trafficChart.data = trafficDataHourly;
+        trafficChart.update();
+    } else if (target.textContent.includes('Daily')) {
+        trafficChart.data = trafficDataDaily;
+        trafficChart.update();
+    } else if (target.textContent.includes('Weekly')) {
+        trafficChart.data = trafficDataWeekly;
+        trafficChart.update();
+    } else {
+        trafficChart.data = trafficData;
+        trafficChart.update();
+    }
+}
+
 const trafficUL = document.querySelector('.traffic-nav');
 trafficUL.addEventListener('click', e => {
     const target = e.target;
     const li = trafficUL.getElementsByTagName('li');
+
+    //chart change
+    updateChart(target);
 
     if (!target.classList.contains('active') && 
          target.classList.contains('traffic-nav-link')) {
