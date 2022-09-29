@@ -78,6 +78,16 @@ section {
     width: 1.3rem;
     height: 1.3rem;
     fill: var(--main-text-color);
+    margin-top: 1rem;
+}
+.notifications {
+    background: var(--secondary-color);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    position: relative;
+    left: 15px;
+    bottom: 35px;
 }
 .nav-svg {
     width: 1.9rem;
@@ -99,7 +109,7 @@ section {
 }
 .bell-container {
     border-right: 2px solid grey;
-    padding: 1rem .5rem;
+    padding: 1rem .8rem;
 }
 .header img {
     margin: 0 .5rem;

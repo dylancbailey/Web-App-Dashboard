@@ -103,7 +103,7 @@ trafficUL.addEventListener('click', e => {
     const li = trafficUL.getElementsByTagName('li');
 
     //chart change
-    updateChart(target);
+    
 
     if (!target.classList.contains('active') && 
          target.classList.contains('traffic-nav-link')) {
@@ -111,10 +111,12 @@ trafficUL.addEventListener('click', e => {
             li[i].classList.remove('active');
         }
         target.classList.add('active');
+        updateChart(target);
     }
 
     if (trafficUL.classList.contains('active')) {
         trafficUL.classList.remove('active');
+        updateChart(target);
     }
 });
 
