@@ -264,5 +264,33 @@ function showResults(val) {
     });
 };
 
+//local storage
+const emailToggle = document.getElementById('email');
+const publicToggle = document.getElementById('profile');
+const timezone = document.getElementById('timezone');
+const saveBtn = document.getElementById('save');
+const cancelBtn = document.getElementById('cancel');
 
+saveBtn.addEventListener('click', () => {
 
+    localStorage.setItem('email', emailToggle.checked);
+    localStorage.setItem('profile', publicToggle.checked);
+    localStorage.setItem('timezone', timezone.value);
+
+});
+
+cancelBtn.addEventListener('click', () => {
+    localStorage.clear();
+});
+
+if (localStorage.getItem('email') == 'true') {
+    emailToggle.checked = true;
+}
+if (localStorage.getItem('profile') == 'true') {
+    publicToggle.checked = true;
+}
+for (let i = 0; i < timezone.length; i++) {
+    if (timezone[i].value == localStorage.getItem('timezone')) {
+        timezone[i].setAttribute('selected', true);
+    }
+}
