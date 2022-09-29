@@ -18,7 +18,8 @@ alertBanner.addEventListener('click', e => {
 });
 
 //line graph
-trafficCanvas = document.getElementById('traffic-chart');
+const trafficCanvas = document.getElementById('traffic-chart');
+const trafficUL = document.querySelector('.traffic-nav');
 
 let trafficData = {
     labels: ['16-22', '23-29', '30-5', '6-12', '13-19', '20-26', '27-3', '4-10', '11-17', '18-24', '25-31'],
@@ -143,3 +144,39 @@ send.addEventListener('click', (e) => {
         message.value = '';
     }
 });
+
+//autocomplete
+const searchNames = ['Victoria', 'Dale', 'Dawn', 'Dan'];
+
+function autoCompleteMatch(input) {
+    if (input === '') {
+        return [];
+    }
+    const reg = new RegExp(input);
+    return searchNames.filter(function(terms) {
+        if (terms.match(reg)) {
+            return terms;
+        }
+    });
+}
+
+function showResults(val) {
+    const res = document.getElementById('result');
+    const userField = document.getElementById('userField');
+    res.innerHTML = '';
+    let list = '';
+    let listElement = '';
+    let terms = autoCompleteMatch(val);
+    for (let i = 0; i < terms.length; i++) {
+        list = terms[i];
+        listElement += `<li> ${terms[i]} </li>`
+    }
+    res.innerHTML = `<ul> ${listElement} </ul>`;
+
+    res.addEventListener('click', () => {
+        userField.value = list;
+        res.innerHTML = '';
+    });
+};
+
+

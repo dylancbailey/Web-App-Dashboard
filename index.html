@@ -229,7 +229,8 @@
             <h3 class="title">Message User</h3>
             <div class="message-wrapper">
                 <form class="widget-container">
-                    <input type="text" placeholder="Search for User" class="form-field" id="userField">
+                    <input autocomplete="off" type="text" placeholder="Search for User" class="form-field" id="userField" onKeyUp="showResults(this.value)">
+                    <div id="result"></div>
                     <textarea placeholder="Message for User" class="form-area" id="messageField"></textarea>
                     <button class="btn-primary btn-send" id="send">Send</button>
                 </form>
