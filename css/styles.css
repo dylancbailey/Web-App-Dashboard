@@ -4,6 +4,7 @@
     --darker-gray: rgba(219,219,219,255);
     --secondary-color: rgba(129,201,143,255);
     --primary-color: rgba(116,119,191,255);
+    scroll-behavior: smooth;
 }
 
 /* Grid & FlexBox */
@@ -303,6 +304,9 @@ textarea {
     border-radius: 10px;
     text-transform: uppercase;
 }
+.btn-primary:active {
+    background-color: rgba(77,76,114,255);
+}
 .btn-send {
     max-width: 100%;
     margin-bottom: 1rem;
@@ -328,7 +332,6 @@ textarea {
 select:first-child {
     color: grey;
 }
-
 .save,
 .cancel {
     width: 47%;
@@ -337,7 +340,7 @@ select:first-child {
     background-color: gray;
 }
 
-/* Buttom Toggle */
+/* Checkbox Toggle */
 .checkbox {
     appearance: none;
     position: relative;

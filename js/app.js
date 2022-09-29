@@ -232,6 +232,7 @@ send.addEventListener('click', (e) => {
 
 //autocomplete
 const searchNames = ['Victoria', 'Dale', 'Dawn', 'Dan'];
+const sendBtn = document.getElementById('send');
 
 function autoCompleteMatch(input) {
     if (input === '') {
@@ -260,6 +261,15 @@ function showResults(val) {
 
     res.addEventListener('click', () => {
         userField.value = list;
+        res.innerHTML = '';
+    });
+    userField.addEventListener('click', () => {
+        res.innerHTML = '';
+    });
+    message.addEventListener('click', () => {
+        res.innerHTML = '';
+    });
+    sendBtn.addEventListener('click', () => {
         res.innerHTML = '';
     });
 };
