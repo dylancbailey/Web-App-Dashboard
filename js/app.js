@@ -1,5 +1,19 @@
 const alertBanner = document.getElementById('alert');
 
+//notification
+const notification = document.getElementById('notifications');
+notification.addEventListener('click', e => {
+    notification.classList.remove('notifications');
+    alertBanner.innerHTML = 
+    `<div class="alert-banner">
+    <p>1. Finishing writing CSS classes.</p>
+    <p class="alert-banner-close">x</p>
+    </div>
+    <div class="alert-banner smoosh">
+    <p>2. Practice JavaScript loops.</p>
+    `;
+});
+
 //create the html for banner
 alertBanner.innerHTML = 
 `<div class="alert-banner">
@@ -13,7 +27,13 @@ to complete</p>
 alertBanner.addEventListener('click', e => {
     const element = e.target;
     if (element.classList.contains('alert-banner-close')) {
+        
+        for (let i = 0; i < alertBanner.length; i++) {
+            console.log('yo');
+        }
+
         alertBanner.style.display = 'none';
+        notification.classList.remove('notifications');
     }
 });
 
@@ -243,5 +263,6 @@ function showResults(val) {
         res.innerHTML = '';
     });
 };
+
 
 
