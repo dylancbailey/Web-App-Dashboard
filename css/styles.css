@@ -251,6 +251,7 @@ section {
     border-bottom: 1px solid grey;
     width: 90%;
     margin: 0 auto;
+    padding-bottom: 1rem;
 }
 .members-wrapper:nth-child(5) {
     border-bottom: none;
@@ -263,6 +264,9 @@ section {
 }
 .bold {
     font-weight: bold;
+}
+.arrow {
+    display: none;
 }
 
 /* Message */
@@ -423,6 +427,7 @@ select:first-child {
             align-items: center;
             justify-content: flex-end;
             width: 95%;
+            padding-bottom: 0;
         }
         .members-container {
             margin: 1rem 0;
