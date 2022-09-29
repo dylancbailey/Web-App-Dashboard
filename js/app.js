@@ -19,7 +19,6 @@ alertBanner.addEventListener('click', e => {
 
 //line graph
 const trafficCanvas = document.getElementById('traffic-chart');
-const trafficUL = document.querySelector('.traffic-nav');
 
 let trafficData = {
     labels: ['16-22', '23-29', '30-5', '6-12', '13-19', '20-26', '27-3', '4-10', '11-17', '18-24', '25-31'],
@@ -53,6 +52,24 @@ let trafficChart = new Chart(trafficCanvas, {
     type: 'line',
     data: trafficData,
     options: trafficOptions,
+});
+
+const trafficUL = document.querySelector('.traffic-nav');
+trafficUL.addEventListener('click', e => {
+    const target = e.target;
+    const li = trafficUL.getElementsByTagName('li');
+
+    if (!target.classList.contains('active') && 
+         target.classList.contains('traffic-nav-link')) {
+        for (let i = 0; i < li.length; i++) {
+            li[i].classList.remove('active');
+        }
+        target.classList.add('active');
+    }
+
+    if (trafficUL.classList.contains('active')) {
+        trafficUL.classList.remove('active');
+    }
 });
 
 //bar graph
