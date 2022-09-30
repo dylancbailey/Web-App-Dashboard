@@ -7,7 +7,7 @@ bellSVG.addEventListener('click', e => {
     notification.classList.remove('notifications');
     alertBanner.innerHTML = 
     `<div class="alert-banner">
-    <p>1. Finishing writing CSS classes.</p>
+    <p>1. Finish writing CSS classes.</p>
     <p class="alert-banner-close">x</p>
     </div>
     <div class="alert-banner smoosh">
