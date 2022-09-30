@@ -203,6 +203,7 @@ section {
 .social {
     display: flex;
     flex-direction: column;
+    padding-bottom: 1rem;
 }
 .social-wrapper {
     background: var(--light-gray);
@@ -431,6 +432,9 @@ select:first-child {
         }
 
         /* Socials */
+        .social {
+            padding-bottom: 0;
+        }
         .social-container {
             display: flex;
             gap: 1rem;
