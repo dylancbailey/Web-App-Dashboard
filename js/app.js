@@ -2,7 +2,8 @@ const alertBanner = document.getElementById('alert');
 
 //notification
 const notification = document.getElementById('notifications');
-notification.addEventListener('click', e => {
+const bellSVG = document.querySelector('.bell');
+bellSVG.addEventListener('click', e => {
     notification.classList.remove('notifications');
     alertBanner.innerHTML = 
     `<div class="alert-banner">
@@ -231,7 +232,7 @@ send.addEventListener('click', (e) => {
 });
 
 //autocomplete
-const searchNames = ['Victoria', 'Dale', 'Dawn', 'Dan'];
+const searchNames = ['Victoria Chambers', 'Dale Byrd', 'Dawn Wood', 'Dan Oliver'];
 const sendBtn = document.getElementById('send');
 
 function autoCompleteMatch(input) {
@@ -254,7 +255,7 @@ function showResults(val) {
     let listElement = '';
     let terms = autoCompleteMatch(val);
     for (let i = 0; i < terms.length; i++) {
-        list = terms[i];
+        list = terms[i].toLowerCase();
         listElement += `<li> ${terms[i]} </li>`
     }
     res.innerHTML = `<ul> ${listElement} </ul>`;
@@ -291,6 +292,9 @@ saveBtn.addEventListener('click', () => {
 
 cancelBtn.addEventListener('click', () => {
     localStorage.clear();
+    emailToggle.checked = false;
+    publicToggle.checked = false;
+    timezone.selectedIndex = 0;
 });
 
 if (localStorage.getItem('email') == 'true') {

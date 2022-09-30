@@ -7,6 +7,10 @@
     scroll-behavior: smooth;
 }
 
+canvas {
+    max-width: 100%;
+}
+
 /* Grid & FlexBox */
 .grid-container {
     display: grid;
@@ -80,6 +84,11 @@ section {
     height: 1.3rem;
     fill: var(--main-text-color);
     margin-top: .5rem;
+    transition: fill .3s ease;
+}
+.bell:hover {
+    fill: var(--secondary-color);
+    cursor: pointer;
 }
 .notifications {
     background: var(--secondary-color);
@@ -128,7 +137,6 @@ section {
 .main-header {
     display: flex;
     align-items: center;
-    width: 100vw;
 }
 .header-wrapper {
     width: 100%;
@@ -169,6 +177,7 @@ section {
 }
 .alert-banner-close {
     margin-left: auto;
+    cursor: pointer;
 }
 
 /* Line graph */
@@ -184,6 +193,10 @@ section {
     justify-content: center;
     align-items: center;
     gap: 1rem;
+}
+
+.traffic-nav-link:hover {
+    cursor: pointer;
 }
 
 /* Socials */
